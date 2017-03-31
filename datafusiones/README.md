@@ -1,22 +1,39 @@
 <strong><center><font color=blue size=6 face=“黑体”>相关说明</font></center></strong>
+
 ###<font color=blue size=4 face=“黑体”>功能描述：</font>
+
 ####1. 创建分群：
+
 选择实体---选择标签(标识)---输入对应的变量名和默认值---输入分群名称和分群描述---sql语句和相应的信息存入Mysql相应的表
+
 ####2. 查看分群：
+
 界面选择分群，点击查看按钮---Mysql读出相应的分群信息和Sql语句---执行Sql语句获得ElasticSearch中的相应实体---分页展示所得实体列表
+
 ####3. 查看分群详情：
+
 界面选择相应的实体ID---点击查看详情按钮---跳转至详情页，展示相应实体的标签和标识
+
 ####4. 编辑分群：
+
 跳转至创建分群界面
+
 ####5. 删除分群：
+
 删除Mysql中相应的记录
+
 ####6. 实体画像：
+
 选择实体---输入完整标识或部分标识---显示查询模糊结果---点击某个实体的查看详情按钮---跳转至详情页面展示实体标签和标识
+
 ###<font color=blue size=4 face=“黑体”>综上所述：</font>
+
 所涉及的ElasticSearch中的查询内容仅涉及实体ID、实体标签和实体标识，故设计ElasticSearch中的结构为：
+
 <pre class=”brush: json; gutter: true;”>
 {"entityID":"","identification":[{"iid":"","isource":["","",""]}],"label":[{"lid":"","lsource":["","",""]}]}
 </pre>
+
 详细示例见json文件
 
 其中entityID为实体ID，identification为实体标识，包含iid(实体标识内容)和isource(实体标识来源)，label为实体标签，包含lid(实体标签内容)和lsource(实体标签来源)
