@@ -1,4 +1,7 @@
-<center>相关说明</center>
+<div align="center"> 
+
+相关说明
+</div>
 
 ### <font color=blue size=4 face=“黑体”>功能描述：</font>
 
